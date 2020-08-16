@@ -1,0 +1,26 @@
+{
+  "name": "practical-react-programming",
+  "version": "1.0.0",
+  "description": "인프런 - 실전 리액트 프로그래밍 (이재승)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/howdy-mj/practical-react-programming.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/howdy-mj/practical-react-programming/issues"
+  },
+  "homepage": "https://github.com/howdy-mj/practical-react-programming#readme",
+  "dependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "prettier": "^2.0.5"
+  },
+  "devDependencies": {}
+}
