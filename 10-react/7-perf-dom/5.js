@@ -1,0 +1,22 @@
+import React, { useEffect, useState } from 'react';
+
+export default function App() {
+  const [flag, setFlag] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setFlag((prev) => !prev), 1000);
+  });
+
+  const fruits = flag ? FRUITS_1 : FRUITS_2;
+
+  return (
+    <div>
+      {fruits.map((item, index) => (
+        // index가 아니라 item을 key로 지정
+        <p key={item}>{item}</p>
+      ))}
+    </div>
+  );
+}
+
+const FRUITS_1 = ['사과', '바나나'];
+const FRUITS_2 = ['사과', '파인애플', '바나나'];
