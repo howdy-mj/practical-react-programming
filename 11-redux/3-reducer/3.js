@@ -1,3 +1,15 @@
+import produce from 'immer';
+
+const person = { name: 'mike', age: 22 };
+const newPerson = produce(person, (draft) => {
+  draft.age = 32;
+});
+
+// 첫 번째 매개변수는 변경할 상태값을 적고
+// 두 번째 매개변수에서 상태값을 변경하는 로직 작성
+
+// App.js
+
 import React from 'react';
 import produce from 'immer';
 
