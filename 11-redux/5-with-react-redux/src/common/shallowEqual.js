@@ -1,5 +1,7 @@
 import { useSelector, shallowEqual } from 'react-redux';
 
+// shallowEqaul로 배열이 바뀌지 않았으면 참조값으로 얕은 비교, 값이 변경 되었을 때만 컴포넌트가 렌더링
+
 // 미리 커스텀 훅을 만들어서
 function useMySelector(selector) {
   return useSelector(selector, shallowEqual);
