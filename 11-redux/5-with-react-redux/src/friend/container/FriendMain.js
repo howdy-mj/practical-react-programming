@@ -1,6 +1,6 @@
 import React from 'react';
 import { getNextFriend } from '../../common/mockData';
-import { addFriend, setAgeLimit, setShowLimit } from '../state';
+import { addFriend, setAgeLimit, setShowLimit, setValue } from '../state';
 import FriendList from '../component/FriendList';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import NumberSelect from '../component/NumberSelect';
@@ -39,6 +39,7 @@ export default function FriendMain() {
 
   const dispatch = useDispatch();
   function onAdd() {
+    dispatch(setValue('name', 'mike'));
     const friend = getNextFriend(); // 데이터를 가져와서 추가
     dispatch(addFriend(friend));
   }
@@ -49,14 +50,14 @@ export default function FriendMain() {
       <button onClick={onAdd}>친구 추가</button>
       {/* <FriendList friends={friends} /> */}
       <NumberSelect
-        onChange={(v) => dispatch(setAgeLimit(v))}
+        onChange={(v) => dispatch(setValue('ageLimit', v))}
         value={ageLimit}
         options={AGE_LIMIT_OPTIONS}
         postfix="세 이하만 보기"
       />
       <FriendList friends={friendsWithAgeLimit} />
       <NumberSelect
-        onChange={(v) => dispatch(setShowLimit(v))}
+        onChange={(v) => dispatch(setValue('showLimit', v))}
         value={showLimit}
         options={SHOW_LIMIT_OPTIONS}
         postfix="명 이하만 보기(연령 제한 적용)"

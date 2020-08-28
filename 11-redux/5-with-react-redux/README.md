@@ -1,2 +1,3 @@
-reselect로 선택자 함수 만들기
-12분 04초 부터 다시
+react-redux로 변환
+reselector
+action을 key, value로 변경
