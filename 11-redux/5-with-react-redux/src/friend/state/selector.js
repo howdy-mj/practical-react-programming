@@ -19,9 +19,9 @@ export const getFriendsWithAgeLimit = createSelector(
 
 export const getFriendsWithAgeShowLimit = createSelector(
   // console.log('b')
-  [getFriendsWithAgeShowLimit, getShowLimit],
+  [getFriendsWithAgeLimit, getShowLimit],
   (freindsWithAgeLimit, showLimit) => {
     console.log('getFriendsWithAgeShowLimit called');
-    return freindsWithAgeLimit.filter(freindsWithAgeLimit.slice(0, showLimit));
+    return freindsWithAgeLimit.slice(0, showLimit);
   }
 );

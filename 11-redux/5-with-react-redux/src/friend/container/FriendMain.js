@@ -31,6 +31,11 @@ export default function FriendMain() {
     ],
     shallowEqual
   );
+  // 다른 표기 방법
+  // const ageLimit = useSelector(getAgeLimit);
+  // const showLimit = useSelector(getShowLimit);
+  // const friendsWithAgeLimit = useSelector(getFriendsWithAgeLimit);
+  // const friendsWithAgeShowLimit = useSelector(getFriendsWithAgeShowLimit);
 
   const dispatch = useDispatch();
   function onAdd() {
